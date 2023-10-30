@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This is the global Custom CSS */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  /* Navbar --> Navbar.jsx */
+  .header-menu > ul > li {
+    border-bottom: 1px solid transparent;
+  }
+
+  .header-menu > ul > li:hover {
+    color: black;
+    border-bottom: 1px solid black;
+    width: fit-content;
+  }
+
+  .main-nav-menu-mobile {
+    background: rgba(107, 106, 106, 0.5);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+  }
+
+  /* This is the redish-bluish gradient*/
+  .hero {
+    background-image: url(/src/assets/hero-gradient.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* This is the crossborder image in the hero section */
+  .hero::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(/src/assets/crossborder.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .testimonial-card-box {
+    background: #ffffff;
+    box-shadow: 5px 5px 55px -10px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    border: 1px solid #d4d4d440;
+    height: fit-content;
+  }
+
+  .testimonial-card {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .testimonial-card::-webkit-scrollbar {
+    display: none;
+  } /* Hide scrollbar for Chrome, Safari and Opera */
+
+  .newletter-container {
+    background-image: url(/src/assets/newsletter-gradient.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pricing-card-container {
+    box-shadow: 5px 5px 55px -10px rgba(0, 0, 0, 0.09);
+  }
+
+  .footer-link-item:hover {
+    color: black;
+    cursor: pointer;
+  }
+}
